@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+}
+
+body {
+    background: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 3em;
+    /* background: red; */
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 3rem;
+    height: auto;
+    min-height: 60vh;
+    border-radius: 40px;
+    background: #2D2424;
+}
+
+.bar {
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    background: #444444;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar h1 {
+    color: aliceblue;
+}
+
+.information {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+    /* background: green; */
+}
+
+.profile {
+    margin: .5em;
+}
+
+.profile img {
+    border-radius: 20px;
+    width: 500px;
+}
+
+.myinfo {
+    margin: .5em;
+    /* background: palegreen; */
+}
+
+.text {
+    position: relative;
+    color: aliceblue;
+    margin-bottom: .5em;
+    padding: 1em;
+    border-radius: 20px;
+    background: #171010;
+}
+
+.text a {
+    text-decoration: none;
+    color: #33c0ca;
+}
+
+.text1 {
+    position: relative;
+    color: aliceblue;
+    padding: 1em;
+    border-radius: 20px;
+    background: #171010;
+}
+
+.text1 a {
+    text-decoration: none;
+    color: pink;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    border-radius: 0 0 40px 40px;
+    background: #444444;
+}
+
+footer h3 {
+    color: pink;
+}
