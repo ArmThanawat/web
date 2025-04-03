@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+}
+
+.img-side1-container{
+    position: relative;
+    width: 60vw;
+}
+
+.img1{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.img-side2-container{
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img2, .img3, .img4, .img5{
+    width: 100%;
+    height: 24vh;
+    object-fit: cover;
+}
+
+.img1-text {
+    position: absolute;
+    color: #FBDA0C;
+    left: 50%;
+    top: 13%;
+    transform: translate(-50%, -50%);
+    font-size: 15rem;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.trade-mark {
+    position: absolute;
+    color: #FBDA0C;
+    top: 20%;
+    right: -20px; 
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.img1-text2 {
+    position: absolute;
+    color: ivory;
+    left: 50%;
+    bottom: 25%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+
+.arrow {
+    position: absolute;
+    color: ivory;
+    font-size: 2rem;
+    bottom: 100%; 
+    left: 10%;    
+    margin-bottom: 10px;
+    transform: translateX(-50%); 
+}
+
+.btn-container {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%, 0);
+    display: flex;
+    width: 60%;
+    max-width: 400px;
+}
+
+.btn1 {
+    color: black;
+    background-color: #FBDA0C;
+    padding: 15px 20px;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn2 {
+    color: black;
+    background-color: #FBDA0C90;
+    padding: 15px 20px;
+    border-radius: 0 30px 30px 0;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.btn1:hover, .btn2:hover {
+    background-color: #FFE44D;
+}
+
+.btn1, .btn2 {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img2-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.img2-text {
+    position: absolute;
+    color: ivory;
+    top: 2%;
+    left: 2%;
+    z-index: 101;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+
+.img3-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.img4-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+.img5-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px){
+    .container {
+        flex-direction: column;
+    }
+
+    .arrow {
+        left: 10%; 
+        margin-bottom: 5px;
+    }
+
+    .img-side1-container {
+        width: 100vw;
+    }
+
+    .img1 {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    .img1-text {
+        top: 20%;
+        font-size: 8rem;
+    }
+    
+    .trade-mark {
+        font-size: 2rem;
+        right: -20px;
+    }
+
+    .img-side2-container {
+        width: 100vw;
+        height: 75vh;
+    }
+
+    .img2-text {
+        font-size: 3rem;
+    }
+
+    .img2, .img3, .img4, .img5{
+        width: 100%;
+        height: 18vh;
+        object-fit: cover;
+    }
+}
