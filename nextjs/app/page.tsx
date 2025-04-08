@@ -1,51 +1,53 @@
-export default function Home() {
-  return (
-    <body className="m-0 p-0 box-border font-serif flex justify-center min-h-full">
+import Image from 'next/image'
+import { Bungee_Tint } from "next/font/google";
+import Link from 'next/link';
 
-      <div 
-        id="banner-container" 
-        className="relative m-8 p-8 border-4 overflow-hidden w-full max-w-[750px]"
-      >
-        <div 
-          id="banner-box" 
-          className="relative flex flex-col justify-center w-full h-[250px] bg-[rgb(22,191,22)]"
-        >
-          <h2 
-            id="banner-title" 
-            className="absolute font-bold sm:text-[1.5em] self-center py-2 px-5 translate-y-[-125px] border-2 bg-[rgb(135,206,235)]"
-          >
-            Banner
-            </h2>
+const bungee = Bungee_Tint({
+    subsets: ["latin"],
+    weight: "400",
+    });
 
-          <button 
-            id="banner-button" 
-            className="absolute self-end p-0.5 border-2 bg-[rgb(255,255,255)] translate-y-[-108px] translate-x-[-2px]"
-          >
-            x
-          </button>
+    export default function MyApp() {
+    return (<div>  
+        <h1 className={`${bungee.className} "font-bold m-2 p-2"`}>Hello world!!</h1>
 
-          <div 
-          id="box-content" 
-          className="absolute self-center font-bold sm:text-[2em] text-white p-4 border-2 border-dotted border-white "
-          >
-            <h1>This is Next.js position</h1>
-          </div>
+        <Link 
+            className='text-blue-800 block border-2 border-black p-2 m-2 w-fit mb-8'
+            href="/products" 
+            >
+            Go to Product Page
+        </Link>
+
+
+        <div className="w-[80%] border rounded p-4 m-auto bg-slate-100 
+        grid 
+        grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
+        <Image
+            className='p-2 m-4'
+            src="https://computing.psu.ac.th/th/wp-content/uploads/2023/09/PSU-CoC-ENG_01_x49.png"
+            width={150}
+            height={150}
+            alt="PSU Logo"
+        />
+
+        <Image
+            className="p-2 m-4"
+            src="/next.svg"
+            width={150}
+            height={150}
+            alt="Next.js Logo"
+        />
+
+        <div className="w-64 p-2 border mb-2 rounded bg-blue-200 hover:bg-blue-700 hover:text-blue-50">
+            Lorem idivsum, dolor sit amet consectetur adidivisicing elit. Doloribus, consequuntur.
+        </div>
+        <div className="w-64 p-2 border mb-2 rounded bg-blue-600 text-white">
+            Lorem idivsum, dolor sit amet consectetur adidivisicing elit. Doloribus, consequuntur.
+        </div>
+        <div className="w-64 p-2 border rounded bg-amber-300">
+            Lorem idivsum, dolor sit amet consectetur adipisicing elit. Doloribus, consequuntur.
+        </div>
         </div>
 
-        <div 
-        id="circle" 
-        className="absolute w-[100px] h-[100px] rounded-full translate-x-[-50%] translate-y-[-175%] bg-[#ededed]"
-        >
-
-        </div>
-        <div 
-        id="bottom" 
-        className="absolute w-[200px] h-[200px] rounded-[60px] translate-x-[290%] translate-y-[-25%] bg-[#ededed]"
-        >
-
-        </div>
-      </div>
-    </body>
-
-  );
+    </div>)
 }
